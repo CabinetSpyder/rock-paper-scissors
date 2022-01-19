@@ -13,15 +13,36 @@ function computerPlay(){
         If choice = 3, then return Scissors
     */
     if( choice === 1){
-        return "Rock";
+        return "rock";
 
     }else if(choice === 2){
-        return "Paper";
+        return "paper";
         
     }else if(choice == 3){
-        return "Scissors";
+        return "scissors";
     }
 }
 
 
+function playRound(playerSelection, computerSelection){
+    /* Make the player's Selection case sensitive */
+    playerSelection = playerSelection.toUpperCase();
+    playerSelection = playerSelection.toLowerCase();
 
+    /* Implement the rock paper sicssors logic */
+    /* 3 posible outcomes: you win, computer does or it's a tie*/
+    if(playerSelection ===  computerSelection){
+        return "It's a tie";
+
+        /* All the cases in wich the player wins */
+    }else if( ((playerSelection === "rock") && (computerSelection === "scissors")) || 
+            ((playerSelection === "paper") && (computerSelection === "rock")) ||
+            ((playerSelection === "scissors") && (computerSelection === "paper")) ){
+
+        return "You win";
+
+    }else {
+        return "Computer wins";
+    }
+
+}
