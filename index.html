@@ -1,10 +1,20 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Rock Paper Scissor Game</title>
+        <title>Rock Paper Scissor Game with UI</title>
         <meta charset="UTF-8">
+        <script src="game_logic.js" defer></script>
+        <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <script src="game_logic.js"></script>
+        <div class="score" id="score">
+            <h2 id="ties">Ties: 0</h2>
+            <h2 id="playerScore">Player wins: 0</h2>
+            <h2 id="computerScore">Computer wins: 0</h2>
+        </div>
+        <button id="rock">Rock</button>
+        <button id="paper">Paper</button>
+        <button id="scissor">Scissor</button>
+        <button class="resetButton" id="reset">Play Again</button>
     </body>
 </html>
